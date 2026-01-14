@@ -1,11 +1,33 @@
-// Solve this for homework
 #include <iostream>
+#include <limits>
 
 int main(void) {
     int amount_of_input;
     scanf("%d", &amount_of_input);
+    amount_of_input--;
 
-    std::cout << "I should loop " << amount_of_input << " times\n";
+    int smallest, second_smallest;
+
+    scanf("%d", &second_smallest); // Grab the first actual value
+    smallest = second_smallest;
+
+    for (int i = 0; i < amount_of_input; i++) {
+        int input;
+        scanf("%d", &input);
+    
+        if (input < second_smallest) {
+            second_smallest = input;
+        }
+
+        if (input < smallest) {
+            second_smallest = smallest;
+            smallest = input;
+        }
+    }
+
+    std::cout << "Second Smallest: " << second_smallest << "\n";
+    std::cout << "Smallest: " << smallest << "\n";
+
     return 0;
 }
 
