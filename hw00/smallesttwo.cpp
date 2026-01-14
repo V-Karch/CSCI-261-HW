@@ -15,10 +15,6 @@ int main(void) {
         int input;
         scanf("%d", &input);
     
-        if (input < second_smallest) {
-            second_smallest = input;
-        }
-
         if (input < smallest) {
             second_smallest = smallest;
             smallest = input;
