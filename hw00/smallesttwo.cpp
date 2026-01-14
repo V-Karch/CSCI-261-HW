@@ -25,8 +25,8 @@ int main(void) {
         }
     }
 
-    std::cout << "Second Smallest: " << second_smallest << "\n";
-    std::cout << "Smallest: " << smallest << "\n";
+    std::cout << second_smallest << "\n";
+    std::cout << smallest << "\n";
 
     return 0;
 }
